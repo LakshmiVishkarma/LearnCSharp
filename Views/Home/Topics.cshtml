@@ -1,0 +1,102 @@
+﻿@model learncSharp_Website.Models.CodeVM
+@{
+    Layout = "~/Views/Shared/_CSharpTopicLayout.cshtml";
+}
+
+<div class="align-items-center justify-content-center mt-4">
+    <h1 class="fw-bolder heading-color text-center">Learn C#</h1>
+</div>
+@*<div class="align-items-center justify-content-center mt-3">
+    <h1 class="fw-bolder heading-color text-center background-colr">C#</h1>
+</div>*@
+@*<div class="row">
+    <div class="col-lg-10 float-start">
+        <button class="btn previous-nextbutton">
+            Home <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+</div>
+    <div class="col-lg-2 float-end">
+        <button class="btn previous-nextbutton">
+           Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>*@
+<div class="container">
+    <span class="badge background-colr p-3" style="margin-bottom: -20px;">Free Course</span>
+    <div class="row row-cols-lg-auto">
+        <div class="col-lg-10 col-md-12 col-sm-2 border-2" style="border: 2px solid #5f2bd6;height:500px; auto; border-radius:5px">
+            <p class="mt-2 justify-content-lg-center mt-5">
+                C# (pronounced <span class="fw-bolder" style="color:#5f2bd6">C Sharp</span>) is a programming language developed by Microsoft for its .NET project.
+                Designed to be simple, modern and purposeful. C# is widely used to develop a variety of applications,
+                including desktop software, web applications, mobile applications (with Xamarin), and games (e.g. with Unity).
+                It is considered a versatile language due to its power, type safety, and size.
+            </p>
+            <div class="row">
+                <div class="align-items-center justify-content-center mt-3" style="width: 50%;margin-left: 15rem;">
+                    <h4 class="heading-color text-center background-colr pb-2" style="border-radius:25px;">Welcome to our C# programming tutorial</h4>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li>Here we'll guide you through the fascinating world of C# programming, one step at a time.</li>
+                    <li>Whether you're a complete beginner or looking to sharpen your skills, our tutorial is designed to cater to learners at all levels.</li>
+                    <li>Throughout this tutorial, we'll cover essential concepts, from basic syntax to advanced topics, to help you become proficient in C# programming.</li>
+                    <li>Each lesson is crafted to provide clear explanations, practical examples, and hands-on exercises to reinforce your understanding.</li>
+                    <li>By the end of this tutorial, you'll have the knowledge and confidence to tackle real-world projects and explore the endless possibilities of C# programming.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<form method="post">
+    <div class="container mt-5" style="width:1100px">
+        <p style="font-size:25px">We will write a simple program C# that displays <b>Hello, World!</b> on the screen.</p>
+        <div class="row">
+            <div class="col-lg-6 position-relative" style="height: 500px; background-color:#212529; color:white; border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;border-top: 7px solid #5f2bd6;border-bottom: 7px solid #5f2bd6
+">
+
+
+
+                <div class="col-lg-12 pt-5 ps-3">
+                    <pre>
+
+
+
+    using System;
+
+    namespace HelloWorld
+    {
+        class Program
+        {
+            static void Main(string[] args)
+              {
+                Console.WriteLine("@Model.text");    
+              }
+        }
+    }
+                </pre>
+                </div>
+
+                <button type="submit" class=" btn ms-3 mb-3 position-absolute bottom-0 start-0" style="display:none;background-color:#5f2bd6; color:white">Try it yourself</button>
+            </div>
+            <div class="col-lg-6 position-relative" style=" border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem; background-color:#5f2bd6;">
+                <h4 class="pt-3 ps-5 position-absolute top-0 start-50 translate-middle-x" style="color:white">Output</h4>
+                <h4 pt-5 ps-5 style="color:white" class="position-absolute top-50 start-50 translate-middle">
+                    @Model.text
+                </h4>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="mt-5" style="font-size: 30px;font-weight: bolder;color: #5f2bd6;">You will see examples in each chapter.</p>
+            <h4 style="border-left: 7px solid #5f2bd6;padding: 20px;background-color: #f6d556;width: 1085px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;" class="mt-3">We recommeded you to follow the sequence list in the left menu of this tutorial for better understanding.</h4>
+        </div>
+    </div>
+</div>

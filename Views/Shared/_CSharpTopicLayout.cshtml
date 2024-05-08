@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodeLeap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/learncSharp_Website.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    .text-white {
+    color: white;
+    }
+
+    .textbox-side-radius {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    }
+
+    .button-right-radius {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    }
+
+    .nav-bottom-radius {
+    border-bottom-right-radius: 1.5rem;
+    }
+      
+        .sidenav {
+            height: 100%;
+            width: 150px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #e1dfe6;
+            padding-top: 20px;
+            border-right: 3px solid #d1c7e6;
+            font-size:3px;
+        }
+
+            .sidenav a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #5f2bd6;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    background-color: #5f2bd6 ;
+                    color: White;
+                   /* border-right: 3px solid white;*/
+                }
+
+        .container {
+            margin-left: 138px; 
+        }
+        .heading-color{
+            color: #5f2bd6;
+        }
+        .previous-nextbutton{
+            background-color: #5f2bd6;
+            color:white;
+        }
+
+        .previous-nextbutton:hover{
+                color: white;
+        }
+        .background-colr{
+            background-color: #5f2bd6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-bottom-radius" style="background-color: #5f2bd6;">
+            <div class="container-fluid ">
+                <a class="nav-link fw-bolder text-white" asp-controller="Home" asp-action="Index">LEARN C#</a>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style=" background-color: white;border-radius: 3px;"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Topics">Topics</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Interview Questions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Technical Interview Questions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" href="#">Any Query?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Side Navbar -->
+        <div class="sidenav mt-5">
+            <a href="#">.Net Framework</a>
+            <a href="#">C# Tutorial</a>           
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3 mt-5">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Learn csharp language - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+l̥

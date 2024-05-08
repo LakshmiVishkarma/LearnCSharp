@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - learncSharp_Website</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/learncSharp_Website.styles.css" asp-append-version="true" />\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        .text-white {
+            color: white;
+        }
+
+        .textbox-side-radius {
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+
+        .button-right-radius {
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+
+        .nav-bottom-radius {
+            border-bottom-right-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-bottom-radius" style="background-color: #5f2bd6;">
+            <div class="container-fluid ">
+                <a class="nav-link fw-bolder text-white" asp-area="" asp-controller="Home" asp-action="Topics">LEARN C#</a>
+                <form class="ms-2">
+                    <div class="input-group" id="searchtextbox">
+                        <input type="text"
+                               class="form-control textbox-side-radius"
+                               placeholder="type something"
+                               aria-label="search"
+                               aria-describedby="basic-addon1" />
+                        <button onclick="next()"
+                                type="button"
+                                class="input-group-text button-right-radius"
+                                id="basic-addon1">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Topics">Topics</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Interview Questions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Technical Interview Questions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" href="#">Any Query?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3 mt-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Learn csharp language - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
